@@ -1,10 +1,10 @@
-# Pet Classifier — Deployment Starter
+# Image Classifier — Deployment Starter
 
-Deploy your trained pet breed classifier as a web app.
+Deploy any fastai image classifier as a web app.
 
 ## Quick Start
 
-1. Copy your `pet_classifier.pkl` (from Lesson 2, Part 11) into the `models/` folder
+1. Copy your exported `.pkl` file into the `models/` folder and update the filename in `app/main.py`
 2. Run: `docker-compose up --build`
 3. Open `http://localhost:8501` for the Streamlit UI
 4. Or call the API directly:
