@@ -19,6 +19,9 @@ env/
 cifar-*-batches-py/
 MNIST/
 FashionMNIST/
+oxford-iiit-pet/
+oxford-102-flowers/
+food-101/
 
 # OS
 .DS_Store
