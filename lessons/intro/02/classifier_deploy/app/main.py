@@ -16,7 +16,7 @@ async def lifespan(app: FastAPI):
     # Startup: create tables and load model
     Base.metadata.create_all(bind=engine)
 
-    model_path = Path(settings.models_dir) / "classifier.pkl"  # ← rename to match your exported .pkl
+    model_path = Path(settings.models_dir) / "pet_classifier.pkl"
     print(f"Loading model from {model_path}...")
     predict_module.learn = load_learner(model_path)
     print(f"Model loaded. Classes: {predict_module.learn.dls.vocab}")
@@ -24,7 +24,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="Image Classifier API", lifespan=lifespan)
+app = FastAPI(title="Pet Classifier API", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
