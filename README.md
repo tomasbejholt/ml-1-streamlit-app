@@ -63,14 +63,49 @@ There's also a helper script you can run instead:
 
 ## Working locally
 
-If your machine can handle it, you can work locally instead of Colab:
+If your machine can handle it, you can work locally instead of Colab.
+
+### Setup with mamba (recommended)
+
+[Miniforge](https://github.com/conda-forge/miniforge) gives you `mamba` — a fast drop-in replacement for `conda`. Install Miniforge first, then:
 
 ```bash
 git clone <YOUR_FORK_URL>
-cd ua_ml_1
-pip install torch torchvision scikit-learn pandas matplotlib jupyter
+cd ua_machine_learning_1
+
+# Create environment
+mamba create -n ml-venv python=3.12 -y
+mamba activate ml-venv
+
+# Core ML stack
+mamba install pytorch torchvision pytorch-cuda=12.8 -c pytorch -c nvidia -y
+mamba install scikit-learn pandas numpy matplotlib seaborn jupyter -y
+
+# Additional packages used in lessons
+pip install fastai xgboost lightgbm transformers datasets kaggle
+
 jupyter notebook
 ```
+
+> **No GPU?** Skip `pytorch-cuda=12.8` and the `-c nvidia` channel — PyTorch will install CPU-only.
+>
+> **macOS Apple Silicon?** Replace the pytorch line with:
+> `mamba install pytorch torchvision -c pytorch -y`
+
+### Setup with pip
+
+```bash
+git clone <YOUR_FORK_URL>
+cd ua_machine_learning_1
+python -m venv .venv && source .venv/bin/activate
+pip install torch torchvision scikit-learn pandas numpy matplotlib seaborn jupyter
+pip install fastai xgboost lightgbm transformers datasets kaggle
+jupyter notebook
+```
+
+### Datasets
+
+Small datasets are included in `data/`. Larger ones need to be downloaded — see [`data/DATASETS.md`](data/DATASETS.md) for instructions.
 
 Use tools like Claude Code or Codex to help you learn — create your own notebooks, experiment, break things.
 
