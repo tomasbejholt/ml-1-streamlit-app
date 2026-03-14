@@ -225,6 +225,9 @@ You’ll find that it’s not that easy to find tutorials on machine learning.
 
 - Fireship - Machine Learning in 100 Seconds (~2 min, fast overview): https://www.youtube.com/watch?v=PeMlgBn-0cs
 - Google - Introduction to ML (interactive text): https://developers.google.com/machine-learning/intro-to-ml
+- StatQuest - A Gentle Introduction to Machine Learning (12 min, explains supervised vs unsupervised with clear examples): https://www.youtube.com/watch?v=Gv9_4yMHFhI
+- IBM Technology - What is Machine Learning? (6 min, good broad overview): https://www.youtube.com/watch?v=9gGnTQTYNaE
+- Cassie Kozyrkov - Making Friends with Machine Learning (6-part series from Google's former Chief Decision Scientist, very practical "how to think about ML" framing - a few years old now but the concepts hold up): https://www.youtube.com/watch?v=lYWt-aCnE2U
 
 ## The fastai course
 

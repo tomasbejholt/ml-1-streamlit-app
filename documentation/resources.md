@@ -1,0 +1,73 @@
+# Resources
+
+A collection of useful videos, articles, and tools organized by topic. These are gathered from across the course and will grow over time.
+
+## What is Machine Learning?
+
+- Fireship - Machine Learning in 100 Seconds (~2 min): https://www.youtube.com/watch?v=PeMlgBn-0cs
+- StatQuest - A Gentle Introduction to Machine Learning (12 min): https://www.youtube.com/watch?v=Gv9_4yMHFhI
+- IBM Technology - What is Machine Learning? (6 min): https://www.youtube.com/watch?v=9gGnTQTYNaE
+- Cassie Kozyrkov - Making Friends with Machine Learning (6-part series, a few years old but still solid): https://www.youtube.com/watch?v=lYWt-aCnE2U
+- Google - Introduction to ML (interactive text): https://developers.google.com/machine-learning/intro-to-ml
+
+## Regression & Gradient Descent
+
+- Google ML Crash Course - Linear Regression: https://developers.google.com/machine-learning/crash-course/linear-regression
+- 3Blue1Brown - Gradient descent, how neural networks learn (19 min, visual): https://www.youtube.com/watch?v=IHZwWFHWa-w
+
+## Classification & Neural Networks
+
+- Google ML Crash Course - Logistic Regression: https://developers.google.com/machine-learning/crash-course/logistic-regression
+- 3Blue1Brown - But what is a neural network? (19 min, visual): https://www.youtube.com/watch?v=aircAruvnKk
+- Medium - Train a Neural Network in PyTorch (beginner walkthrough): https://medium.com/@sahin.samia/train-a-neural-network-in-pytorch-a-complete-beginners-walkthrough-3897d18d6078
+
+## MLPs & Tabular Pipelines
+
+- PyTorch - Dataset & DataLoaders tutorial: https://docs.pytorch.org/tutorials/beginner/basics/data_tutorial.html
+- DataLoaders video: https://www.youtube.com/watch?v=PXOzkkB5eH0
+- PyTorch classification from scratch: https://www.slingacademy.com/article/pytorch-classification-from-scratch-building-a-dense-neural-network/
+- PyTorch for tabular data with embeddings: https://yashuseth.wordpress.com/2018/07/22/pytorch-neural-network-for-tabular-data-with-categorical-embeddings/
+- NYC taxi fares example: https://francescopochetti.com/pytorch-for-tabular-data-predicting-nyc-taxi-fares/
+
+## Trees & Gradient Boosting
+
+- Random Forests (fastai lesson): https://www.youtube.com/watch?v=AdhG64NF76E&list=PLfYUBJiXbdtSvpQjSnJJ_PmDQB_VyT5iU&index=7
+- Gradient Boosted Trees: https://www.youtube.com/watch?v=PxgVFp5a0E4
+- SHAP - Model Interpretation: https://www.youtube.com/watch?v=MQ6fFDwjuco
+- Model Interpretable vs Explainable: https://www.youtube.com/watch?v=VY7SCl_DFho
+
+## CNNs & Image Classification
+
+- CNN intro: https://www.youtube.com/watch?v=pj9-rr1wDhM
+- Alternative CNN intro: https://www.youtube.com/watch?v=HGwBXDKFk9I
+- Practical convolutions in Excel (from ~44 min): https://www.youtube.com/watch?v=htiNBPxcXgo
+- Guide to Convolution Arithmetic (paper): https://arxiv.org/abs/1603.07285
+- Zeiler & Fergus - Visualizing what CNNs learn (paper): https://arxiv.org/abs/1311.2901
+- Batch Normalization (paper): https://arxiv.org/abs/1502.03167
+
+## Collaborative Filtering & Recommendations
+
+- Jeremy Howard - Collaborative Filtering (fastai lesson 7, start from 1:02:00): https://www.youtube.com/watch?v=p4ZZq0736Po&list=PLfYUBJiXbdtSvpQjSnJJ_PmDQB_VyT5iU&index=7
+- Hu et al. 2008 - Collaborative Filtering for Implicit Feedback (paper): http://yifanhu.net/PUB/cf.pdf
+- Rendle et al. 2009 - BPR: Bayesian Personalized Ranking (paper): https://arxiv.org/abs/1205.2618
+- Netflix Prize - Matrix Factorization Techniques (paper): https://datajobs.com/data-science-repo/Recommender-Systems-[Netflix].pdf
+
+## PyTorch
+
+- Patrick Loeber - PyTorch Tutorial series: https://www.youtube.com/watch?v=EMXfZB8FVUA&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4
+- PyTorch Quickstart: https://docs.pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html
+- PyTorch Building Models: https://docs.pytorch.org/tutorials/beginner/basics/buildmodel_tutorial.html
+- PyTorch Optimization: https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html#full-implementation
+
+## Courses
+
+- fast.ai Practical Deep Learning: https://course.fast.ai/Lessons/lesson1.html
+- Kaggle Learn - Intro to Machine Learning: https://www.kaggle.com/learn/intro-to-machine-learning
+- Google ML Crash Course: https://developers.google.com/machine-learning/crash-course/framing/ml-terminology
+- StatQuest - ML playlist: https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
+
+## Tools & Setup
+
+- Google Colab: https://colab.google.com
+- Miniforge (mamba/conda): https://github.com/conda-forge/miniforge
+- fast.ai Forums: https://forums.fast.ai
