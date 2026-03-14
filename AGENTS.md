@@ -74,14 +74,13 @@ Write as a colleague explaining concepts over coffee. The notebook IS the teache
 
 ## Lecture Notes
 
-Lecture notes live in `lecture_notes/<lesson>/` as markdown files. They are the primary place for:
+Lecture notes live in `lecture_notes/<lesson>/` as markdown files. They are introductory articles that describe what a lesson covers, link to resources, and provide setup help. Think of them as a companion reading — not internal documentation about notebook structure.
 
-- Lesson structure and notebook outline
-- Teaching tips (what to emphasize, what to skip, what to pre-download)
-- Resources (videos, articles, external links) organized by timing (before/after lecture)
-- Setup instructions (Colab, local environment)
-
-Resources and links go in lecture notes, not in notebooks. Notebooks should be self-contained for learning; lecture notes are for preparation and reference.
+- Describe the topics and concepts covered in the lesson
+- Link to external resources (videos, articles) organized by timing (before/after lecture)
+- Include setup instructions where relevant (Colab, local environment)
+- Written for the reader, not about the notebook internals
+- Will often contain manually written prose added over time
 
 ## Code Style
 
