@@ -17,14 +17,38 @@ The `original/` folder is your reset point. If you break something in `modified/
 
 ## Using Google Colab
 
-1. Go to [colab.google.com](https://colab.google.com)
-2. Click **File → Open notebook → GitHub**
-3. Authorize GitHub if prompted
-4. Search for this repo or paste the repo URL
-5. Select the notebook you want to open
-6. Work in Colab, then **File → Save a copy in GitHub** to save back to your fork
+Google Colab gives you a free Python environment with GPU access in your browser - no local setup needed. Here's how to connect it to your course repo.
 
-Always work from the `modified/` versions. Keep the `original/` copies clean.
+### First time setup
+
+1. Go to [colab.google.com](https://colab.google.com) and sign in with your Google account
+2. Connect GitHub to Colab: go to [colab.google.com/github](https://colab.google.com/github) - this will prompt you to authorize Colab to access your GitHub account
+3. Check the **"Include private repositories"** checkbox (important - your course repo is private)
+4. If prompted, grant access to the **UA-classroom** organization so Colab can see your course repo
+
+### Opening a notebook
+
+1. In the GitHub tab, paste your repo URL (the one from your GitHub Classroom assignment, something like `https://github.com/UA-classroom/pia25-ml_1_course-ua_ml_1-YOURUSERNAME`)
+2. **Be patient** - the UA-classroom organization has a lot of repos, so searching can take 30-60 seconds. Just wait for the loading to finish.
+3. Colab will list all notebooks in the repo. You can browse the folder structure to find what you need.
+4. Pick the one you want to work on - always open from the `modified/` folder
+
+### How Colab works with GitHub
+
+When you open a notebook from GitHub, Colab creates a **copy** in your Colab session. It does not modify the repo. Your changes only exist in that session and will disappear if it times out (~90 minutes of inactivity).
+
+To save your work back to the repo:
+- **File -> Save a copy in GitHub** - this commits the notebook back to your repo on GitHub
+
+To save to Google Drive instead (as a backup):
+- **File -> Save a copy in Drive**
+
+### Important notes
+
+- Always work from the `modified/` versions. Keep the `original/` copies clean.
+- Colab sessions timeout after ~90 minutes of inactivity - save frequently.
+- Most packages are pre-installed. If something is missing: `!pip install fastai transformers xgboost lightgbm`
+- If your repo doesn't show up in Colab, go to [github.com/settings/applications](https://github.com/settings/applications), find Google Colaboratory, and grant it access to the UA-classroom organization.
 
 ## Staying in sync with course updates
 
