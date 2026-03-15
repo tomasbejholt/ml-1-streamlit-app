@@ -62,15 +62,15 @@ Your repo was created via GitHub Classroom from the template repo. Add the templ
 
 ```bash
 cd ua_machine_learning_1
-git remote add upstream https://github.com/UA-classroom/ua_ml_1.git
+git remote add upstream https://github.com/UA-classroom/pia25-ml_1_course-ua_ml_1.git
 ```
 
 Verify it worked:
 
 ```bash
 git remote -v
-# origin    -> your GitHub Classroom repo (pia25-ml_1_course-ua_ml_1)
-# upstream  -> the course template (ua_ml_1) where I push updates
+# origin    -> your own repo (pia25-ml_1_course-ua_ml_1-YOURUSERNAME)
+# upstream  -> the course assignment repo (pia25-ml_1_course-ua_ml_1) where updates are pushed
 ```
 
 ### Pulling updates (do this before each lesson)
