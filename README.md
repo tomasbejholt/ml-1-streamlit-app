@@ -4,21 +4,6 @@ Machine learning course material. Notebooks, projects, and datasets for hands-on
 
 ## Repo structure
 
-```
-lessons/              Lesson notebooks and projects
-  intro/              L01–L02: Course intro, first model
-  regression/         L03: Regression and gradient descent
-  classification_and_mlps/  L04–L07: Classification, MLPs, trees
-  neural_networks_images/   L09–L11: Image classification, CNNs
-  recommendation_engines/   Collaborative filtering
-  other_resources/    Reference notebooks (math intuition, etc.)
-
-data/                 Shared datasets used across lessons
-backups/              Snapshot copies of all lesson notebooks
-documentation/        Course plans and notes
-images/               Shared images
-```
-
 Each lesson folder follows this structure:
 
 ```
