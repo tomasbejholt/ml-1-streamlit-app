@@ -10,9 +10,10 @@ Each lesson folder follows this structure:
 lesson_name/
   original/    ← Starter notebook (don't edit this one)
   modified/    ← Your working copy (edit, run, experiment here)
+  example/     ← Sometimes exists: a completed example for reference
 ```
 
-The `original/` folder is your reset point. If you break something in `modified/`, you can always copy the original back.
+The `original/` folder is your reset point. If you break something in `modified/`, you can always copy the original back. Some homework folders include an `example/` folder with a completed version you can reference if you get stuck - try to solve it yourself first.
 
 ## Using Google Colab
 
