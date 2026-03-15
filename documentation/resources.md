@@ -66,8 +66,39 @@ A collection of useful videos, articles, and tools organized by topic. These are
 - Google ML Crash Course: https://developers.google.com/machine-learning/crash-course/framing/ml-terminology
 - StatQuest - ML playlist: https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
 
+## Math Prep (Bare Minimum)
+
+You don't need a math degree to do ML. Most of the math will be introduced as we go during the course. But having a basic feel for these few concepts will make your life easier. This is the absolute minimum - if you've taken any stats class or calculus class, you're probably fine.
+
+### Basic statistics
+
+You should be comfortable with what these mean and roughly how they work:
+- **Mean** - the average. Sum of values divided by count.
+- **Median** - the middle value when sorted. More robust to outliers than mean.
+- **Variance** - how spread out the data is. Average of squared distances from the mean.
+- **Standard deviation** - square root of variance. Same idea as variance but in the original units.
+- **Correlation** - how much two variables move together. Ranges from -1 to +1.
+
+These come up constantly when exploring data, evaluating models, and understanding distributions.
+
+**Resources:**
+- StatQuest - Mean, Variance, Standard Deviation (14 min, clear and visual): https://www.youtube.com/watch?v=SzZ6GpcfoQY
+- Khan Academy - Statistics & Probability (comprehensive, start with "Summarizing quantitative data"): https://www.khanacademy.org/math/statistics-probability
+
+### What is a derivative?
+
+A derivative measures how much a function's output changes when you nudge the input slightly. That's it. You don't need to be able to compute derivatives by hand - PyTorch does that automatically. But understanding the concept ("if I change this input a little, how much does the output change?") is essential because that's exactly what gradient descent does: it asks "which direction should I nudge the weights to reduce the loss?"
+
+**Resources:**
+- 3Blue1Brown - Essence of Calculus, Chapter 2: The paradox of the derivative (17 min, builds the intuition visually without requiring any prior calculus): https://www.youtube.com/watch?v=9vKqVkMQHKk
+- 3Blue1Brown - Essence of Calculus, full series (if you want the full picture, chapters 1-3 are enough for ML purposes): https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr
+- Khan Academy - Derivatives introduction: https://www.khanacademy.org/math/calculus-1/cs1-derivatives-definition-and-basic-rules
+
+### What about linear algebra / matrix multiplication?
+
+You'll learn this naturally during the course as we work with tensors and neural networks. You don't need to prep it.
+
 ## Tools & Setup
 
 - Google Colab: https://colab.google.com
 - Miniforge (mamba/conda): https://github.com/conda-forge/miniforge
-- fast.ai Forums: https://forums.fast.ai

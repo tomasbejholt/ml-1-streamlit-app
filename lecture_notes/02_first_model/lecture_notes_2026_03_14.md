@@ -1,6 +1,6 @@
 # L02: Your First Model - The ML Process
 
-In Lesson 1, we saw what ML can do - demos across tabular data, images, and text. We introduced the core vocabulary (features, labels, training, inference, loss, gradient descent) and saw models work without understanding how.
+In Lesson 1, we saw what ML can do - demos across tabular data, images, and text. We introduced the core vocabulary (features, labels, training, inference, loss, gradient descent) and saw models work without understanding how. Just a reminder: you’re not really expected to understand all of those words yet, that’s what we’re going to build on today, and the upcoming lessons will keep repeating a lot of these things - after all, we’ll keep doing the same thing over and over again, many times.
 
 Now we're going to actually build something. This lesson walks through the full ML process from start to finish: loading data, preparing it, training a model, evaluating results, iterating, and saving the model for deployment. By the end, you'll have a working image classifier that can recognize 37 breeds of cats and dogs.
 
@@ -27,12 +27,14 @@ PyTorch is the dominant ML framework used in research and industry. When you rea
 
 At its core, PyTorch does two things:
 
-1. **Tensor operations** - like numpy but with GPU support, so matrix math runs 10-100x faster
-2. **Automatic differentiation (autograd)** - it can automatically compute gradients (derivatives), which is what makes gradient descent work without manual math
+1. **Tensor operations** - like numpy but with GPU support, so matrix math runs 10-100x faster (we’ll talk tensors during the course, as they are the core of pytorch)
+2. **Automatic differentiation (autograd)** - it can automatically compute gradients (derivatives), which is what makes gradient descent work without manual math. We’ll also talk more about gradients later, and this idea of derivatives - don’t worry. I’m not saying it’s not hard, I’m saying we’ll dive deeper into it later.
 
 We won't write raw PyTorch in this lesson. But everything we do today runs on PyTorch underneath, and starting in L3 you'll be writing it directly - building training loops, computing losses, and running gradient descent by hand. Understanding that PyTorch is the engine under the hood is important context.
 
-We'll properly introduce PyTorch with hands-on code in Lesson 3. For now, just know it's the engine running underneath.
+For a quick 2-minute overview: [Fireship - PyTorch in 100 Seconds](https://www.youtube.com/watch?v=ORMx45xqWkA)
+
+For a deeper dive into tensors and autograd: [PyTorch official autograd tutorial](https://docs.pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html)
 
 ## Why fastai? (and why we'll stop using it)
 
@@ -54,29 +56,17 @@ Think of it like this: PyTorch is like building a car from parts. fastai is like
 - When something goes wrong (and it will), you need to understand the internals to fix it. fastai is great until it isn't, and then you're stuck
 - You can't truly understand ML concepts like backpropagation, loss landscapes, or regularization if a library is doing them invisibly
 
-This is the only lesson that uses fastai. Starting in Lesson 3, we switch to pure PyTorch and build everything ourselves - the training loop, the loss calculation, the gradient updates. You'll understand every line of code. fastai is the quick win that shows you the destination before we learn the route.
+This is the only lesson that uses fastai. Starting in Lesson 3, we switch to pure PyTorch and build everything ourselves - the training loop, the loss calculation, the gradient updates. You'll understand every line of code. fastai is the quick win that shows you the destination before we learn the route. But fastai will be great to get started, we’ll get a super good feel for the process of training a model. Having that said, don’t focus too much on memorizing fastai syntax, just try to focus on the process and the steps we seem to be doing (exploring, preprocessing, training, evaluation, etc).
 
 For a deeper understanding of fastai's DataBlock API (the data loading system we'll use): [fastai DataBlock tutorial](https://docs.fast.ai/tutorial.datablock.html)
 
 For the full fastai vision tutorial: [fastai Computer Vision intro](https://docs.fast.ai/tutorial.vision.html)
 
-## Transfer Learning and Fine-tuning
+## Transfer Learning: A Shortcut We'll Use
 
-These are the two most important practical concepts in this lesson.
+One practical detail worth mentioning: we won't train a model from scratch. Training an image classifier from zero requires millions of images and days of compute. Instead, we use a pretrained model (ResNet34) that someone already trained on 1.2 million images. It already knows how to detect edges, textures, and shapes. We just teach it our 37 pet breeds on top of that existing knowledge.
 
-**Transfer learning** means using a model someone already trained on a huge dataset (ImageNet - 1.2 million images, 1000 categories) and applying its knowledge to your smaller, specific problem. The model already learned to recognize edges, textures, shapes, and hundreds of object types. Instead of training from scratch (which needs millions of images and days of compute), you start with all that existing knowledge and just teach it your specific task.
-
-It's like hiring someone who already speaks 10 languages and teaching them an 11th. Much faster than teaching a baby.
-
-**Fine-tuning** is the process of adapting the pretrained model to your data. In fastai, it's literally one line: `learn.fine_tune(3)`. What happens behind the scenes:
-
-- The pretrained model's early layers (which detect edges, textures, general shapes) are mostly kept as-is
-- The final classification layer is replaced (from "1000 ImageNet categories" to "37 pet breeds")
-- The model trains for a few epochs, adjusting the weights to work with your specific data
-
-We'll use ResNet34 - a neural network architecture with 34 layers and about 21 million parameters. "ResNet" stands for Residual Network - you don't need to know the details yet, just know it's a well-proven architecture for image classification.
-
-For a short explanation of transfer learning: [IBM Technology - What is Transfer Learning?](https://www.youtube.com/watch?v=BqqfQnyjmgg) (~5 min)
+This is called **transfer learning**, and `learn.fine_tune(3)` is the fastai shortcut that does it. We'll come back to transfer learning properly in later lessons - for now just know it's why we can get 90% accuracy with only ~7,000 images instead of millions. In upcoming lessons, we’ll train image models from scratch, but just for today we’ll fine-tune a model - the process will be very similar to a standard process, so don’t worry too much about it.
 
 ## Key Concepts Introduced
 
@@ -133,7 +123,7 @@ Experiment with different settings: more epochs, a bigger architecture (ResNet50
 
 ### Step 6: Ship
 
-Export the trained model to a .pkl file. Load it back and prove it works without the training code. Sketch a deployment architecture (FastAPI backend + Streamlit frontend, deployed on AWS EC2 or similar) to show that ML models don't have to live in notebooks.
+Export the trained model to a .pkl file. Load it back and prove it works without the training code. Sketch a deployment architecture (FastAPI backend + Streamlit frontend) to show that ML models don't have to live in notebooks.
 
 ## Terminology
 
@@ -160,6 +150,10 @@ Export the trained model to a .pkl file. Load it back and prove it works without
 
 ## Resources
 
+### Course video:
+
+TBA
+
 ### Before the lesson
 
 - 3Blue1Brown - But What is a Neural Network? (19 min, excellent visual intuition for how neural networks work, great complement to our neural network intro from L1): https://www.youtube.com/watch?v=aircAruvnKk
@@ -170,7 +164,7 @@ Export the trained model to a .pkl file. Load it back and prove it works without
 
 - fastai Computer Vision tutorial (official docs, walks through image classification step by step): https://docs.fast.ai/tutorial.vision.html
 - fastai DataBlock tutorial (official docs, explains the data loading system we use in the notebook): https://docs.fast.ai/tutorial.datablock.html
-- fastai Vision Learner docs (reference for the learner object and fine_tune): https://docs.fast.ai/vision.learner.html
+- fastai Vision Learner docs (reference for the learner object and fine_tune): https://docs.fast.ai/vision.learner.htm
 - Google ML Crash Course - Overfitting (interactive explanation with visual examples): https://developers.google.com/machine-learning/crash-course/overfitting/overfitting
 
 ### Quick videos
@@ -180,9 +174,8 @@ Export the trained model to a .pkl file. Load it back and prove it works without
 
 ### The fastai course
 
-The fastai course by Jeremy Howard is a solid companion to this course. It has a similar top-down philosophy (use it first, understand later). Their first two lessons overlap with our L1-L2. The course is free and available at https://course.fast.ai/. Worth watching the first lesson before or after our L2. In fact, this course is very much inspired by the fastai course, but the goal is to do everything in pure PyTorch, and we’ll spend more or less time on certain topics.
+The fastai course by Jeremy Howard is a solid companion to this course. It has a similar top-down philosophy (use it first, understand later). Their first two lessons overlap with our L1-L2. The course is free and available at https://course.fast.ai/. Worth watching the first lesson before or after our L2. In fact, this course is very much inspired by the fastai course, but the goal is to do everything in pure pytorch, and we’ll spend more or less time on certain topics.
 
-### For the ambitious (optional)
-
-- fast.ai Practical Deep Learning - Lesson 2 (deployment and production - they use Gradio and HuggingFace Spaces, while we'll use Streamlit and deploy on AWS EC2/similar cloud provider, but the overall concepts of exporting and deploying a model are the same): https://course.fast.ai/Lessons/lesson2.html
+- [fast.ai](http://fast.ai/) Practical Deep Learning - Lesson 2 (deployment and production, goes deeper on the ship step): https://course.fast.ai/Lessons/lesson2.html
 - Dive into Deep Learning - Fine-tuning chapter (textbook-style explanation with code): http://d2l.ai/chapter_computer-vision/fine-tuning.html
+- Codecademy - Getting Started with PyTorch (article, beginner-friendly intro): https://www.codecademy.com/article/getting-started-with-pytorch-a-beginners-guide-to-deep-learning
