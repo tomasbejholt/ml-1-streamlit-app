@@ -29,9 +29,17 @@ Build the intuition visually first: loss landscape, the point moving toward the 
 
 Code from scratch first (pure Python/NumPy), then show the PyTorch version. PyTorch automates what was just built manually — the connection should be obvious.
 
+**Bias and variance** — in L2 we saw overfitting and underfitting as patterns in loss curves. Now we can explain *why* they happen.
+
+- **Bias** is how far off the model is *structurally*. A straight line fitting curved data will always be wrong in the same way no matter how much data you give it. That's high bias. The model's assumptions are too simple for the real pattern.
+- **Variance** is how much the model changes when trained on different data. A model that fits every noise point perfectly will look completely different on a new sample. That's high variance. The model has too much flexibility and chases noise instead of signal.
+- **The tradeoff**: simple models (high bias, low variance) are consistently wrong. Complex models (low bias, high variance) are unstable. Total error = bias + variance + irreducible noise. We want the sweet spot in the middle.
+
+Practically: if both train and val loss are high, you have a bias problem (model too simple). If train loss is low but val loss is high, you have a variance problem (model too complex or too little data). This connects directly to what we saw in L2's overfit/underfit demo, but now we know the underlying reason.
+
 ## Terminology Introduced
 
-parameters/weights, loss function, gradient, gradient descent, forward pass, learning rate
+parameters/weights, loss function, gradient, gradient descent, forward pass, learning rate, bias (model), variance
 
 ## Dataset
 
