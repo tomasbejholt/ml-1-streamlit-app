@@ -17,7 +17,9 @@ The `original/` folder is your reset point. If you break something in `modified/
 
 ## Using Google Colab
 
-Google Colab gives you a free Python environment with GPU access in your browser - no local setup needed. Here's how to connect it to your course repo.
+[Google Colab](https://colab.google.com) is a free online notebook environment that runs in your browser. Think of it as a cloud computer with Python and most ML libraries pre-installed - you don't need to install anything on your own machine. It also gives you free access to GPUs, which makes training models much faster. The notebooks look and work just like Jupyter notebooks, but everything runs on Google's servers.
+
+Here's how to connect it to your course repo.
 
 ### First time setup
 
