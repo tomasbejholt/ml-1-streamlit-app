@@ -1,9 +1,16 @@
 #!/bin/bash
-# Pull latest course updates from the upstream repo
+# Pull latest course updates from the template repo
 
-git fetch upstream 2>/dev/null || {
-    echo "No upstream remote found."
-    echo "Run: git remote add upstream <UPSTREAM_REPO_URL>"
-    exit 1
-}
+# Add upstream if not already set
+if ! git remote | grep -q upstream; then
+    echo "Adding upstream remote..."
+    git remote add upstream https://github.com/UA-classroom/ua_ml_1.git
+fi
+
+echo "Fetching updates from upstream..."
+git fetch upstream
+
+echo "Merging upstream/main..."
 git merge upstream/main --no-edit
+
+echo "Done! Your repo is up to date."

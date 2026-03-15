@@ -25,26 +25,43 @@ The `original/` folder is your reset point. If you break something in `modified/
 
 Always work from the `modified/` versions. Keep the `original/` copies clean.
 
-## Getting updates
+## Staying in sync with course updates
 
-When new lessons or fixes are pushed, sync your fork with the upstream repo:
+I will be pushing new lessons, fixes, and improvements to the course repo throughout the semester. You need to pull these updates into your fork regularly. Here's how:
+
+### First time setup (do this once)
+
+Your repo was created via GitHub Classroom from the template repo. Add the template as an "upstream" remote so you can pull updates from it:
 
 ```bash
-# One-time setup (only do this once)
-git remote add upstream <UPSTREAM_REPO_URL>
+cd ua_machine_learning_1
+git remote add upstream https://github.com/UA-classroom/ua_ml_1.git
+```
 
-# Pull latest changes
+Verify it worked:
+
+```bash
+git remote -v
+# origin    -> your GitHub Classroom repo (pia25-ml_1_course-ua_ml_1)
+# upstream  -> the course template (ua_ml_1) where I push updates
+```
+
+### Pulling updates (do this before each lesson)
+
+```bash
 git fetch upstream
 git merge upstream/main
 ```
 
-If you haven't edited files in `original/` folders, this will merge cleanly. If you get conflicts in `modified/` notebooks you've changed, git will ask you to resolve them — keep your version or accept the update.
-
-There's also a helper script you can run instead:
+Or just run the helper script:
 
 ```bash
 ./sync.sh
 ```
+
+This will pull any new lessons, notebook updates, or bug fixes into your local copy.
+
+**Important:** If you only edit files in `modified/` folders (which you should), this will merge cleanly every time. The `original/` folders are kept in sync with the course repo automatically. If you do get merge conflicts in notebooks you've changed, keep your version - your work matters more than the upstream update.
 
 ## Working locally
 
