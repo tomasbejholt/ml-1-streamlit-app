@@ -4,7 +4,7 @@
 # Add upstream if not already set
 if ! git remote | grep -q upstream; then
     echo "Adding upstream remote..."
-    git remote add upstream https://github.com/UA-classroom/ua_ml_1.git
+    git remote add upstream https://github.com/UA-classroom/pia25-ml_1_course-ua_ml_1.git
 fi
 
 echo "Fetching updates from upstream..."
