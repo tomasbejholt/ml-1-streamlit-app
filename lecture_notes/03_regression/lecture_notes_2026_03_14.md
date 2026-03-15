@@ -41,3 +41,6 @@ Simple regression — house prices, salary prediction, or similar. Something int
 
 Google's crash course on linear regression (good visual explanations):
 https://developers.google.com/machine-learning/crash-course/linear-regression
+
+StatQuest - Bias and Variance (clear explanation of the tradeoff, connects to overfitting/underfitting):
+https://www.youtube.com/watch?v=EuBBz3bI-aA
