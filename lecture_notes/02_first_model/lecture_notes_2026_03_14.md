@@ -94,6 +94,10 @@ Google has a nice interactive explanation of overfitting: [Google ML Crash Cours
 
 **Confusion matrix** - a grid showing which classes the model confuses with each other. If the model often predicts "Ragdoll" when the answer is "Birman", those two breeds appear as a hot spot in the confusion matrix. Very useful for understanding where the model struggles. For a deeper dive: [Machine Learning Mastery - What is a Confusion Matrix](https://machinelearningmastery.com/confusion-matrix-machine-learning/)
 
+**Hyperparameters** - settings you choose *before* training that control how the model learns. Unlike weights (which the model learns from data), hyperparameters are decisions you make: which architecture to use, how many epochs to train, what image resolution to use, what learning rate to set. The model can't figure these out on its own - you pick them, train, measure the result, and adjust. This is the experimentation loop that ML practitioners spend most of their time in.
+
+The distinction matters: **parameters** (weights) are learned automatically during training. **Hyperparameters** are set by you and stay fixed during a training run. Changing a hyperparameter means retraining from scratch and comparing the result. In the notebook, we'll run several experiments where we change one hyperparameter at a time (architecture, epochs, image size) and compare accuracy. This "change one thing, measure, repeat" discipline is one of the most important habits to build early.
+
 ## What We'll Do in the Notebook
 
 ### Step 1: Understand Your Data
@@ -117,9 +121,15 @@ Load a pretrained ResNet34 and fine-tune it on our pet data. Watch the training 
 
 Look at the confusion matrix to see which breeds get mixed up. Examine the model's biggest mistakes (top losses). Make predictions on individual images and see the confidence scores. Peek under the hood at what the model actually receives as input (a 224x224x3 grid of numbers).
 
-### Step 5: Iterate
+### Step 5: Iterate (Hyperparameter Tuning)
 
-Experiment with different settings: more epochs, a bigger architecture (ResNet50), larger images (320px instead of 224px). Change one thing at a time, measure the impact. This is how real ML development works - systematic experimentation.
+This is where we introduce hyperparameters properly. We run three experiments against our baseline (ResNet34, 5 epochs, 224px):
+
+1. **Bigger model** - ResNet50 instead of ResNet34. More parameters, more capacity. Does it help?
+2. **More epochs** - 8 instead of 5. The model was still improving - will more training push accuracy higher, or will it start overfitting?
+3. **Larger images** - 320px instead of 224px. More pixels means more detail, but also slower training and more memory.
+
+Each experiment changes exactly one thing. We compare all results in a single chart. The takeaway isn't which setting "wins" - it's that ML is fundamentally about this experimentation loop. Form a hypothesis, change one thing, measure, learn. Repeat. In later lessons we'll add more hyperparameters to this toolkit (learning rate, regularization, schedulers), but the discipline of systematic experimentation starts here.
 
 ### Step 6: Ship
 
@@ -141,6 +151,7 @@ Export the trained model to a .pkl file. Load it back and prove it works without
 | **Learning rate** | Step size for weight adjustments | Controls training speed |
 | **Confusion matrix** | Grid of predicted vs actual classes | Where the model gets confused |
 | **Batch** | Group of images processed together | 64 images at a time |
+| **Hyperparameter** | Setting you choose before training | Architecture, epochs, image size, LR |
 
 ## Connection to L1 and L3
 
