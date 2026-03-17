@@ -74,7 +74,7 @@ These concepts show up naturally during the notebook. We don't front-load defini
 
 **Epoch** - one complete pass through all training data. If you have 5,000 training images and train for 3 epochs, the model sees each image 3 times. More epochs = more chances to learn, but also more risk of overfitting.
 
-**Loss** - a single number measuring how wrong the model's predictions are. Lower is better. In L1 we saw loss visually (the gap between the line and the data points in the regression demo). Here you'll watch the loss number drop during training. The specific loss function we use is called cross-entropy loss - we'll derive it from scratch in L3, for now just know: it measures wrongness.
+**Loss** - a single number measuring how wrong the model's predictions are. Lower is better. In L1 we saw loss visually (the gap between the line and the data points in the regression demo). Here you'll watch the loss number drop during training. The specific loss function we use is called cross-entropy loss - we'll derive it from scratch in L4, for now just know: it measures wrongness.
 
 **Accuracy** - the percentage of validation images the model classifies correctly. This is the metric we actually care about. Loss is what the model optimizes internally, accuracy is what we report.
 
@@ -157,7 +157,7 @@ Export the trained model to a .pkl file. Load it back and prove it works without
 
 **From L1:** We introduced features, labels, training, inference, loss, gradient descent, and the idea that models are just collections of numbers (weights) that get optimized. L2 builds on all of this - you'll see loss in action (watching it drop), you'll see the train/test split applied, and you'll see a model with 21 million weights doing something impressive.
 
-**To L3:** Everything fastai does in one line, we'll build by hand in L3. The loss function? We'll derive it. The training loop? We'll code it. Gradient descent? We'll implement it step by step. L2 shows you the destination. L3 starts building the road.
+**To L3:** Everything fastai does in one line, we'll build by hand in L3. The loss function? We'll derive MSE for regression. The training loop? We'll code it. Gradient descent? We'll implement it step by step. L2 shows you the destination. L3 starts building the road.
 
 ## Resources
 
