@@ -25,9 +25,13 @@ A collection of useful videos, articles, and tools organized by topic. These are
 
 ## Classification & Neural Networks
 
+- Visually Explained - Classification intro (clear visual walkthrough): https://www.youtube.com/watch?v=3bvM3NyMiE0
+- StatQuest - Logistic Regression (15 min, sigmoid, log-odds, maximum likelihood): https://www.youtube.com/watch?v=yIYKR4sgzI8
 - Google ML Crash Course - Logistic Regression: https://developers.google.com/machine-learning/crash-course/logistic-regression
 - 3Blue1Brown - But what is a neural network? (19 min, visual): https://www.youtube.com/watch?v=aircAruvnKk
+- 3Blue1Brown - What is Backpropagation Really Doing? (13 min, preview of L5): https://www.youtube.com/watch?v=Ilg3gGewQ5U
 - Medium - Train a Neural Network in PyTorch (beginner walkthrough): https://medium.com/@sahin.samia/train-a-neural-network-in-pytorch-a-complete-beginners-walkthrough-3897d18d6078
+- PyTorch - Building Models tutorial (nn.Module, nn.Sequential): https://docs.pytorch.org/tutorials/beginner/basics/buildmodel_tutorial.html
 
 ## MLPs & Tabular Pipelines
 
