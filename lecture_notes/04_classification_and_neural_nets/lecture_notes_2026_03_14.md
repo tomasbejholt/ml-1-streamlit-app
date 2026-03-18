@@ -50,3 +50,7 @@ Titanic — familiar data, so the focus stays on the model.
 
 Google's tutorial on logistic regression:
 https://developers.google.com/machine-learning/crash-course/logistic-regression
+
+Resources:
+
+https://medium.com/@sahin.samia/train-a-neural-network-in-pytorch-a-complete-beginners-walkthrough-3897d18d6078

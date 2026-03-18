@@ -150,14 +150,8 @@ Export the trained model to a .pkl file. Load it back and prove it works without
 
 ## Resources
 
-### Course video:
-
-TBA
-
 ### Before the lesson
 
-- 3Blue1Brown - But What is a Neural Network? (19 min, excellent visual intuition for how neural networks work, great complement to our neural network intro from L1): https://www.youtube.com/watch?v=aircAruvnKk
-- StatQuest - Neural Networks Pt.1 (20 min, builds up from simple models to neural nets, clear and methodical): https://www.youtube.com/watch?v=CqOfi41LfDw
 - [fast.ai](http://fast.ai/) Practical Deep Learning - Lesson 1 (~90 min, same top-down philosophy we use, covers transfer learning and the fastai workflow in depth): https://course.fast.ai/Lessons/lesson1.html
 
 ### Documentation and tutorials
@@ -172,9 +166,14 @@ TBA
 - IBM Technology - What is Transfer Learning? (~5 min, clear explanation with examples): https://www.youtube.com/watch?v=BqqfQnyjmgg
 - deeplizard - Fine-tuning a Neural Network Explained (short, focused on the concept of fine-tuning): https://deeplizard.com/learn/video/5T-iXNNiwIs
 
+### What is a neural network? → We’ll dive deeper into this upcoming lessons (l4 and onward), but feel free to start checking it out. It might feel super hard, and that’s fine, again - we’ll dive deeper later, and I’ve spent a lot of time on the notebooks 4,5,6,7,8~ to help explain it.
+
+- 3Blue1Brown - But What is a Neural Network? (19 min, excellent visual intuition for how neural networks work, great complement to our neural network intro from L1): https://www.youtube.com/watch?v=aircAruvnKk
+- StatQuest - Neural Networks Pt.1 (20 min, builds up from simple models to neural nets, clear and methodical): https://www.youtube.com/watch?v=CqOfi41LfDw
+
 ### The fastai course
 
-The fastai course by Jeremy Howard is a solid companion to this course. It has a similar top-down philosophy (use it first, understand later). Their first two lessons overlap with our L1-L2. The course is free and available at https://course.fast.ai/. Worth watching the first lesson before or after our L2. In fact, this course is very much inspired by the fastai course, but the goal is to do everything in pure pytorch, and we’ll spend more or less time on certain topics.
+The fastai course by Jeremy Howard is a solid companion to this course. It has a similar top-down philosophy (use it first, understand later). Their first two lessons overlap with our L1-L2. The course is free and available at https://course.fast.ai/. Worth watching the first lesson before or after our L2. In fact, this course is very much inspired by the fastai course, but the goal is to do everything in pure pytorch instead of using the fastai framework, and we’ll spend more or less time on certain topics.
 
 - [fast.ai](http://fast.ai/) Practical Deep Learning - Lesson 2 (deployment and production, goes deeper on the ship step): https://course.fast.ai/Lessons/lesson2.html
 - Dive into Deep Learning - Fine-tuning chapter (textbook-style explanation with code): http://d2l.ai/chapter_computer-vision/fine-tuning.html
