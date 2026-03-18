@@ -127,11 +127,14 @@ That's the bridge to L4: we keep the loop, swap in a more powerful model, and sw
 
 ## Resources
 
+- Train / test split https://www.youtube.com/watch?v=SjOfbbfI2qY or https://www.youtube.com/watch?v=zAxuIlCBvOw→ Why do we split data?
 - Linear regression short intro: https://www.youtube.com/watch?v=3dhcmeOTZ_Q&t=35s
 - What is loss: https://www.youtube.com/watch?v=QBbC3Cjsnjg
-- Gradient descent https://www.youtube.com/watch?v=sDv4f4s2SB8&t=85s (you dont have to think too much about the math, try to understand it more conceptually)
+- Gradient descent https://www.youtube.com/watch?v=sDv4f4s2SB8&t=85s (you dont have to think too much about the math, try to understand it more conceptually) - we’re checking how the loss is affected by moving the line (which actually means we’re updating something called weights / theta)
 - Overfitting & underfitting: https://www.youtube.com/watch?v=B9rhzg6_LLw or this one https://www.youtube.com/watch?v=o3DztvnfAJg and this one https://www.youtube.com/watch?v=dBLZg-RqoLg
 - StatQuest - Bias and Variance (7 min, connects overfitting/underfitting to the underlying theory): https://www.youtube.com/watch?v=EuBBz3bI-aA
+- Derivatives - what is a derivative? (simple visual explanation of slope at a point): https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-1-new/ab-2-1/v/derivative-as-a-concept
+- Feature scaling / normalization (why we need it for gradient descent, ~5 min, Andrew Ng draws the contour plots): https://www.youtube.com/watch?v=FDCfw-YqWTE
 
 ### Documentation and tutorials
 
