@@ -1,9 +1,11 @@
 import io
 import time
 
+import torch
+import torchvision.transforms as T
+from PIL import Image
 from fastapi import APIRouter, File, UploadFile, Depends
 from sqlalchemy.orm import Session
-from fastai.vision.all import PILImage
 
 from app.database import get_db
 from app.models import Prediction
@@ -13,14 +15,27 @@ router = APIRouter()
 # Model is set by main.py at startup
 learn = None
 
+_transform = T.Compose([
+    T.Resize((224, 224)),
+    T.ToTensor(),
+    T.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+])
+
 
 @router.post("/predict")
 def predict(file: UploadFile = File(...), db: Session = Depends(get_db)):
     start = time.perf_counter()
 
     image_bytes = file.file.read()
-    img = PILImage.create(io.BytesIO(image_bytes))
-    pred, idx, probs = learn.predict(img)
+    pil_img = Image.open(io.BytesIO(image_bytes)).convert("RGB")
+    tensor = _transform(pil_img).unsqueeze(0)
+
+    with torch.no_grad():
+        out = learn.model(tensor)
+        probs = out.softmax(dim=-1)[0]
+
+    idx = probs.argmax().item()
+    pred = learn.dls.vocab[idx]
 
     processing_time_ms = int((time.perf_counter() - start) * 1000)
 

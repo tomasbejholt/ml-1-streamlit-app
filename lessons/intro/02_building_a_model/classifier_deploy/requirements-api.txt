@@ -3,6 +3,7 @@ torch
 torchvision
 fastai
 fastcore
+ipython
 fastapi
 uvicorn
 python-multipart
