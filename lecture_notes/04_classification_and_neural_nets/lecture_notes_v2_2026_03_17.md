@@ -59,9 +59,18 @@ The goal isn't to fully understand what's happening inside the network yet. That
 - You can try to read their section on logistic regression, but you don’t have to spend all that much time on the classification section as I personally believe we’ll deal more with ta as we get into neural networks https://developers.google.com/machine-learning/crash-course/logistic-regression - logistic regression is one way of doing classification, but don’t try to memorize everything - we don’t actually use logistic regression barely at all, what’s better to spend time on is understanding things like the sigmoid function, and once again realizing that we’re generating random weights and try to optimize them using gradient descent
 - StatQuest - Logistic Regression (15 min, clear walkthrough of sigmoid, log-odds, and maximum likelihood - the same model we build from scratch in the notebook): https://www.youtube.com/watch?v=yIYKR4sgzI8.
 
+### A slight intro to neural networks - don’t focus much on this, but feel free to glance at it.
+
+Activation functions: https://www.youtube.com/watch?v=s-V7gKrsels
+
+Both the sigmoid function and ReLU are activation functions - where mathematical functions that can take an input and give an output. The two most important are sigmoid and ReLU. ReLU is something absolutely critical to make sure neural networks actually work! They are part of the magic, if you will. And they are far more easy than you would think. 
+
+If you go through the notebook, you’ll understand that the sigmoid function “squashes” values to be something between 0 and 1 - cool! That means that if you had a negative value, it might end up something like 0.1. ReLU on the other hand just says: if I ever get a negative value, I’m just going to make it 0! That’s it. It turns negative values to 0, and positive numbers stay exactly what they are, no change whatsoever. In the next lecture, we’ll talk even more about ReLU - but for now, just understand that being able to take a number and make sure its either 0 or positive is something that benefits neural networks, because it adds NON LINEARITY! 
+
+- You can start watching this series a little bit, but it’s better to spend more time on it for the next lesson https://www.youtube.com/watch?v=kY14KfZQ1TI&list=PLCC34OHNcOtpcgR9LEYSdi9r7XIbpkpK1&index=1
+
 ### Documentation and tutorials
 
 - Google ML Crash Course - Logistic Regression (interactive text, decent starting point for the math): https://developers.google.com/machine-learning/crash-course/logistic-regression
 - Medium - Train a Neural Network in PyTorch (beginner walkthrough, covers the same ground as our notebook): https://medium.com/@sahin.samia/train-a-neural-network-in-pytorch-a-complete-beginners-walkthrough-3897d18d6078
 - PyTorch - Building Models tutorial (official docs, reference for nn.Module and nn.Sequential): https://docs.pytorch.org/tutorials/beginner/basics/buildmodel_tutorial.html
-
