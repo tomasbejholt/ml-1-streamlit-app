@@ -31,3 +31,4 @@ Thumbs.db
 .vscode/
 .idea/
 
+lessons/intro/02_building_a_model/classifier_deploy/models/*.pkl
