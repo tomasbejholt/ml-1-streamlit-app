@@ -12,8 +12,15 @@ A collection of useful videos, articles, and tools organized by topic. These are
 
 ## Regression & Gradient Descent
 
+- Train/test split - why we split data: https://www.youtube.com/watch?v=SjOfbbfI2qY or https://www.youtube.com/watch?v=zAxuIlCBvOw
+- Linear regression short intro: https://www.youtube.com/watch?v=3dhcmeOTZ_Q&t=35s
+- What is loss: https://www.youtube.com/watch?v=QBbC3Cjsnjg
+- Gradient descent (conceptual, don't worry about the math): https://www.youtube.com/watch?v=sDv4f4s2SB8&t=85s
 - Google ML Crash Course - Linear Regression: https://developers.google.com/machine-learning/crash-course/linear-regression
 - 3Blue1Brown - Gradient descent, how neural networks learn (19 min, visual): https://www.youtube.com/watch?v=IHZwWFHWa-w
+- Derivatives - what is a derivative (simple, slope at a point): https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-1-new/ab-2-1/v/derivative-as-a-concept
+- Feature scaling / normalization (~5 min, Andrew Ng, contour plots): https://www.youtube.com/watch?v=FDCfw-YqWTE
+- Overfitting & underfitting: https://www.youtube.com/watch?v=B9rhzg6_LLw or https://www.youtube.com/watch?v=o3DztvnfAJg or https://www.youtube.com/watch?v=dBLZg-RqoLg
 - StatQuest - Bias and Variance (clear explanation of the tradeoff, connects to overfitting/underfitting): https://www.youtube.com/watch?v=EuBBz3bI-aA
 
 ## Classification & Neural Networks
