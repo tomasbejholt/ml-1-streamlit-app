@@ -24,7 +24,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="Pet Classifier API", lifespan=lifespan)
+app = FastAPI(title="EuroSAT Classifier API", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
