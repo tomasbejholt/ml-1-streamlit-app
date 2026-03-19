@@ -3,11 +3,11 @@ import requests
 from PIL import Image
 import io
 
-API_URL = "http://api:8000/predict"
+API_URL = "http://34.196.199.91:8000/predict"
 
-st.set_page_config(page_title="Pet Breed Classifier", layout="centered")
-st.title("Pet Breed Classifier")
-st.write("Upload a photo of a cat or dog and the model will predict its breed.")
+st.set_page_config(page_title="EuroSAT Land Use Classifier", layout="centered")
+st.title("EuroSAT Land Use Classifier")
+st.write("Upload a satellite image and the model will predict the land use category.")
 
 uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
 
