@@ -3,7 +3,7 @@ import requests
 from PIL import Image
 import io
 
-API_URL = "http://34.196.199.91:8000/predict"
+API_URL = "http://api:8000/predict"
 
 st.set_page_config(page_title="EuroSAT Land Use Classifier", layout="centered")
 st.title("EuroSAT Land Use Classifier")
