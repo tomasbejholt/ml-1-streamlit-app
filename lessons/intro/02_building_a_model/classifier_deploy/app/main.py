@@ -16,7 +16,7 @@ async def lifespan(app: FastAPI):
     # Startup: create tables and load model
     Base.metadata.create_all(bind=engine)
 
-    model_path = Path(settings.models_dir) / "pet_classifier.pkl"
+    model_path = Path(settings.models_dir) / "my_classifier.pkl"
     print(f"Loading model from {model_path}...")
     predict_module.learn = load_learner(model_path)
     print(f"Model loaded. Classes: {predict_module.learn.dls.vocab}")
