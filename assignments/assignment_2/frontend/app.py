@@ -28,7 +28,8 @@ if page == "🔮 Förutsäg Churn":
     with col1:
         st.subheader("Demografisk info")
         gender         = st.selectbox("Kön", ["Male", "Female"])
-        senior         = st.selectbox("Senior Citizen", ["0", "1"])
+        senior_display = st.selectbox("Senior Citizen", ["No", "Yes"])
+        senior         = "1" if senior_display == "Yes" else "0"
         partner        = st.selectbox("Partner", ["Yes", "No"])
         dependents     = st.selectbox("Dependents", ["Yes", "No"])
         tenure         = st.slider("Tenure (månader)", 0, 72, 12)
