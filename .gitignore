@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+.env.*
+
+# Downloaded datasets (use torchvision/kaggle to fetch these)
+*.tar.gz
+*.zip
+cifar-*-batches-py/
+MNIST/
+FashionMNIST/
+oxford-iiit-pet/
+oxford-102-flowers/
+food-101/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+
+# Large datasets (downloaded at runtime)
+data/creditcard/
+
+# Bulldozer dataset (large files, built from Train.7z at runtime)
+data/bluebook-for-bulldozers/Train.csv
+data/bluebook-for-bulldozers/TrainAndValid.csv
