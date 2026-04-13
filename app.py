@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 import random
 
-API_URL = "http://34.196.199.91:8001"
+API_URL = "https://churn-backend-wz05.onrender.com"
 
 st.set_page_config(page_title="Telco Churn Predictor", layout="wide", page_icon="📡")
 
