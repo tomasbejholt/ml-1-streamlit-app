@@ -376,6 +376,7 @@ elif page == "📈 Learning Curves":
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE 5 — EDA
+
 # ═══════════════════════════════════════════════════════════════════════════════
 elif page == "🔍 EDA":
     st.title("🔍 Exploratory Data Analysis")
@@ -491,3 +492,21 @@ elif page == "ℹ️ Om modellerna":
         "AUC-ROC":   [0.8290, 0.8461, 0.8502],
     })
     st.dataframe(results.set_index("Modell"), use_container_width=True)
+
+    st.divider()
+    st.subheader("Reflektion")
+    st.markdown("""
+Datan var ojämnt fördelad, 73.5% "No Churn" och 26.5% "Churn", vilket gör accuracy missvisande som ensamt mått.
+En modell som alltid gissar "No Churn" får 73% accuracy utan att lära sig något alls.
+
+Vid en snabb titt kan det verka som att Random Forest är bäst eftersom den har högst accuracy (79.4%).
+Men det är fel slutsats. Random Forest är försiktig och gissar ofta "No Churn", vilket ger hög accuracy
+men sämst recall av alla tre modeller. Den missar mer än hälften av de kunder som faktiskt churnar,
+vilket är precis det man vill undvika i ett sådant här problem.
+
+F1 och AUC-ROC är mer ärliga mått här. F1 straffar modeller som ignorerar minoritetsklassen och
+AUC-ROC mäter rankningsförmåga oberoende av threshold, vilket gör den robust mot klassobalans.
+Sett till de måtten är LightGBM den bästa modellen med AUC 0.8502 och F1 0.63.
+MLP:n har bäst recall (84%) tack vare pos_weight och hittar flest churnade kunder,
+men på bekostnad av fler falsklarm. Vilket man föredrar beror på vad man faktiskt försöker lösa.
+""")
