@@ -174,7 +174,9 @@ if page == "🔮 Förutsäg Churn":
         endpoint = "/predict/mlp" if "MLP" in model_choice else "/predict/tree"
         # Both LightGBM and Random Forest use /predict/tree endpoint
         try:
-            r = requests.post(f"{API_URL}{endpoint}", json=payload, timeout=10)
+            # Render free tier sleeps when idle; a cold start can take ~60s
+            with st.spinner("Väcker servern och kör modellen – första anropet kan ta upp till en minut..."):
+                r = requests.post(f"{API_URL}{endpoint}", json=payload, timeout=90)
             r.raise_for_status()
             result = r.json()
             prob   = result["probability"]
